@@ -5,6 +5,7 @@
 #define ZOMBIE 100
 ///Logs in the console
 #define LOG 1
+#define LOG_WORLD 0
 ///SIZES
 #define HEIGHT 15
 #define WIDTH 50

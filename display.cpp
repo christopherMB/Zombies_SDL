@@ -24,6 +24,24 @@ void print_world(int** world, SDL_Surface* screen, SDL_Surface** images){
         SDL_Flip(screen);
 }
 
+void print_world_console(int** world){
+
+        for (int i = 0; i < HEIGHT; i++){
+            for (int j = 0; j< WIDTH; j++){
+                if (world[i][j] != 0 && world[i][j] != ZOMBIE){
+                    printf("%c", '0' + world[i][j]);
+                }
+                else if(world[i][j] == ZOMBIE){
+                    printf("Z");
+                }
+                else{
+                    printf(".");
+                }
+            }
+            printf("\n");
+        }
+        printf("\n\n");
+}
 
 SDL_Surface** load_images(){
     SDL_Surface** images = (SDL_Surface**)malloc(sizeof(SDL_Surface*) * NUMBER_OF_PLAYERS + 1);

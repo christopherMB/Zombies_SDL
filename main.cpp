@@ -34,8 +34,6 @@ int main ( int argc, char** argv )
         return 1;
     }
 
-
-
     SDL_Surface** images_SDL = load_images();
 
 
@@ -82,6 +80,9 @@ int main ( int argc, char** argv )
         move_zombies(world, players);//move each zombie once
 
         print_world(world, screen, images_SDL);//display world
+        if(LOG_WORLD){
+            print_world_console(world);
+        }
 
         if (winner == 0) winner = get_winner(players);
 

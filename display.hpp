@@ -11,4 +11,7 @@ void print_world(int** world, SDL_Surface* screen, SDL_Surface** images);
 SDL_Surface** load_images();
 void free_images(SDL_Surface ** images);
 
+///Console print
+void print_world_console(int** world);
+
 #endif // DISPLAY_H_INCLUDED
